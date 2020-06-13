@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:onClick="rootLoginActivityIsTapped"
+    tools:context=".LoginActivity">
+
+  <ImageView
+      android:id="@+id/imageView"
+      android:layout_width="234dp"
+      android:layout_height="81dp"
+      android:layout_marginTop="40dp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.497"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toTopOf="parent"
+      app:srcCompat="@drawable/instagram" />
+
+  <EditText
+      android:id="@+id/edtLoginEmail"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="100dp"
+      android:background="#04E0FB"
+      android:ems="10"
+      android:hint="Please Enter Email..."
+      android:inputType="textPersonName"
+      android:textColorHint="#E71510"
+      android:textColorLink="#00ACC1"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.491"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/imageView" />
+
+  <EditText
+      android:id="@+id/edtLoginPassword"
+      android:layout_width="wrap_content"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="20dp"
+      android:background="#04E0FB"
+      android:ems="10"
+      android:hint="Please Enter Password..."
+      android:inputType="textPassword"
+      android:textColorHint="#E71510"
+      android:textColorLink="#00ACC1"
+      android:textSize="20sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="0.502"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginEmail" />
+
+  <Button
+      android:id="@+id/btnLoginActivity"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="96dp"
+      android:background="#E53935"
+      android:text="Log In"
+      android:textColor="#F4AD06"
+      android:textColorHint="#FFB300"
+      android:textSize="30sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/edtLoginPassword" />
+
+  <Button
+      android:id="@+id/btnSignUpLoginActivity"
+      android:layout_width="0dp"
+      android:layout_height="wrap_content"
+      android:layout_marginTop="12dp"
+      android:background="#FB8C00"
+      android:text="Sign Up"
+      android:textColor="#5308EB"
+      android:textSize="30sp"
+      app:layout_constraintEnd_toEndOf="parent"
+      app:layout_constraintHorizontal_bias="1.0"
+      app:layout_constraintStart_toStartOf="parent"
+      app:layout_constraintTop_toBottomOf="@+id/btnLoginActivity" />
+</androidx.constraintlayout.widget.ConstraintLayout>
