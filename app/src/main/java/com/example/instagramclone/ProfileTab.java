@@ -2,15 +2,14 @@ package com.example.instagramclone;
 
 import android.app.ProgressDialog;
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import androidx.fragment.app.Fragment;
 
 import com.parse.ParseException;
 import com.parse.ParseUser;
@@ -48,6 +47,49 @@ public class ProfileTab extends Fragment {
         btnUpdateInfo = view.findViewById(R.id.btnUpdateInfo);
 
         final ParseUser parseUser = ParseUser.getCurrentUser();
+
+        if(parseUser.get("profileName") == null ) {
+
+            edtProfileName.setText("");
+
+        } else {
+
+            edtProfileName.setText(parseUser.get("profileName").toString());
+        }
+
+        if (parseUser.get("profileBio") == null) {
+
+            edtProfileBio.setText("");
+        } else {
+
+            edtProfileBio.setText(parseUser.get("profileBio") +"");
+
+        }
+
+        if (parseUser.get("profileProfession") == null) {
+
+            edtProfileProfession.setText("");
+
+        } else {
+
+            edtProfileProfession.setText(parseUser.get("profileProfession") +"");
+
+        }
+
+        if (parseUser.get("profileHobbies")==null) {
+            edtProfileHobbies.setText("");
+        } else  {
+            edtProfileHobbies.setText(parseUser.get("profileHobbies") +"");
+
+        }
+
+        if(parseUser.get("profileFavSport") == null) {
+            edtProfileFavSport.setText("");
+        } else {
+
+            edtProfileFavSport.setText(parseUser.get("profileFavSport") +"");
+
+        }
 
         btnUpdateInfo.setOnClickListener(new View.OnClickListener() {
             @Override
